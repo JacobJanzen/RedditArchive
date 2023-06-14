@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "name": "RedditArchive",
+    "version": "1.0",
+    "description": "redirects reddit links to archive links",
+    "content_security_policy": "script-src 'self' https://archive.org",
+    "content_scripts": [
+        {
+            "matches": ["*://*.reddit.com/*", "*://*.archive.org/*"],
+            "js": ["archive.js"]
+        }
+    ]
+}
